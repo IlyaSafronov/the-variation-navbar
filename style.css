@@ -1,0 +1,80 @@
+:root {
+  --nav-height: 60px;
+  --nav-background: #343a40;
+  --dropdown-height: 40px;
+  --nav-link-color: rgba(255, 255, 255, 0.9);
+  --dropdown-color: rgba(0, 0, 0, 0.9);
+  --black: #fff;
+  --btn-search: #2185d0;
+  --btn-search-hover: #1678c2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ! navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: var(--nav-background);
+  padding: 0.5rem 1rem;
+}
+
+.logo {
+
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--nav-link-color);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-list {
+  display: flex;
+  list-style-type:none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  padding: 0.5rem 1rem;
+
+}
+
+.nav-link {
+  color: var(--nav-link-color);
+  text-decoration: none;
+}
+
+/* ! globale style */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+}
+
+.btn-search {
+  background-color: var(--btn-search);
+  color: #f3f3f3;
+}
+
+.btn-search:hover {
+  background-color: var(--btn-search-hover);
+}
