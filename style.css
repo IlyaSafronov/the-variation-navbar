@@ -89,7 +89,70 @@ body {
   border-radius: 3px;
 }
 
-/* ! burger menu */
+/* ! Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  background-color: #fff;
+  border-radius: 3px;
+  width: clamp(160px, 120px, 220px);
+  padding: 0.5rem 0;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+}
+
+.dropdown-list a {
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-list a:hover {
+  background-color: #dededf;
+}
+
+
+
+
+/* ! responsive design */
+@media screen and (max-width: 992px) {
+  .navbar {
+    padding: 0;
+    height: var(--nav-height);
+  }
+  .navbar-content {
+    /* display: none; */
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    background-color: var(--nav-background);
+    top: var(--nav-height);
+    right: 0;
+    width: 0vw;
+    min-height: calc(100vh - var(--nav-height));
+    overflow: hidden;
+    transition: width 0.2s ease-in-out;
+  }
+
+  .navbar-content.show {
+    width: 50vw;
+  }
+  .navbar-list {
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
+  .navbar-right {
+    padding: 0.5rem 1rem;
+  }
+  .search-input {
+    margin-bottom: 0.5rem;
+  }
+  /* ! burger menu */
 .navbar .burger {
   position: absolute;
   right: 12px;
@@ -144,31 +207,5 @@ body {
 .navbar .burger.active span::after {
   transform: rotate(-45deg);
 }
-
-/* ! responsive design */
-@media screen and (max-width: 992px) {
-  .navbar {
-    padding: 0;
-    height: var(--nav-height);
-  }
-  .navbar-content {
-    /* display: none; */
-    flex-direction: column;
-    justify-content: flex-start;
-    position: absolute;
-    background-color: var(--nav-background);
-    top: var(--nav-height);
-    right: 0;
-    width: 50vw;
-    min-height: calc(100vh - var(--nav-height));
-    overflow: hidden;
-  }
-  .navbar-list {
-    flex-direction: column;
-    width: 100%;
-    padding: 0.5rem 1rem;
-  }
-  .navbar-right {
-    padding: 0.5rem 1rem;
-  }
 }
+
