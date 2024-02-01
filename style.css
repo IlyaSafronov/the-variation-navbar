@@ -131,6 +131,20 @@ body {
   top: 0;
 }
 
+.dropdown
+.dropdown-list
+.dropdown:hover {
+  background-color: #dededf;
+}
+
+.dropdown 
+.dropdown-list 
+.dropdown:hover >
+.dropdown-list {
+  display: block;
+
+}
+
 
 
 
@@ -139,6 +153,9 @@ body {
   .navbar {
     padding: 0;
     height: var(--nav-height);
+  }
+  .logo {
+    padding-left: 1rem ;
   }
   .navbar-content {
     /* display: none; */
@@ -223,5 +240,30 @@ body {
 .navbar .burger.active span::after {
   transform: rotate(-45deg);
 }
+/* todo dropdown */
+.dropdown-btn {
+  justify-content: flex-start;
+}
+.dropdown-list {
+  position: relative;
+}
+.dropdown 
+.dropdown-list 
+.dropdown {
+  display: none;
+}
+}
+
+/* ! showcase */
+#showcase {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./showcase.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
 
